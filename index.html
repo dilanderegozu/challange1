@@ -9,158 +9,191 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
   </head>
   <body>
     <div class="page-container">
-      <aside class="side">
-        <section class="user-profile">
-          <img
-            src="https://www.w3schools.com/howto/img_avatar.png"
-            alt="Avatar"
-            class="avatar"
-          />
-          <span>Steve Dean </span>
-        </section>
-        <nav aria-label="Main menu">
+      <nav class="navbar">
+        <div class="left-section">
+          <div class="user-profile">
+            <img
+              src="https://www.w3schools.com/howto/img_avatar.png"
+              alt="Avatar"
+              class="avatar"
+            />
+            <span class="avatar-name">Steve Dean</span>
+          </div>
+          <span class="all-notes">All Notes</span>
+        </div>
+
+        <ul class="nav-actions">
+          <li>
+            <button class="btn-search" aria-label="Search notes">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <circle
+                  cx="9"
+                  cy="9"
+                  r="5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M13 13L17 17"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="on">ON <span class="status-dot"></span></button>
+          </li>
+          <li>
+            <button class="add-note-btn">Add New Note</button>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="main-content">
+        <nav aria-label="Main menu" class="sidebar">
           <ul class="menu-list">
-            <li class="menu-active">
-              <span class="color-dot-purple"></span>
+            <li class="menu-item">
+              <span class="status-dot status1"></span>
               <span>Videos</span>
-              <span class="count-badge purple-bg">07</span>
+              <span class="count1">07</span>
             </li>
-            <li class="menu-active">
-              <span class="color-dot-orange"></span>
+            <li class="menu-item">
+              <span class="status-dot status2"></span>
               <span>Wishlist</span>
-              <span class="count-badge orange-bg">11</span>
+              <span class="count2">11</span>
             </li>
-            <li class="menu-active">
-              <span class="color-dot-blue"></span>
+            <li class="menu-item">
+              <span class="status-dot status3"></span>
               <span>Assignment</span>
-              <span class="count-badge blue-bg">02</span>
+              <span class="count3">02</span>
             </li>
-            <li class="menu-active">
-              <span class="color-dot-teal"></span>
+            <li class="menu-item">
+              <span class="status-dot status4"></span>
               <span>Projects</span>
-              <span class="count-badge teal-bg">05</span>
+              <span class="count4">05</span>
             </li>
-            <li class="menu-active">
-              <span class="color-dot-pink"></span>
+            <li class="menu-item">
+              <span class="status-dot status5"></span>
               <span>Work</span>
-              <span class="count-badge pink-bg">01</span>
+              <span class="count5">01</span>
             </li>
-            <li class="menu-active">
-              <span class="color-dot-yellow"></span>
+            <li class="menu-item">
+              <span class="status-dot status6"></span>
               <span>Study</span>
-              <span class="count-badge yellow-bg">12</span>
+              <span class="count6">12</span>
             </li>
           </ul>
         </nav>
-      </aside>
-
-      <main class="main-content">
-        <header class="top-bar">
-          <h1 class="notes-title">All Notes</h1>
-          <div class="top-actions">
-            <button class="btn" aria-label="Search notes">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-            <button class="on">ON <span class="status-dot"></span></button>
-
-            <button class="add-note-btn">Add New Note</button>
-          </div>
-        </header>
 
         <section class="notes-section">
-          <article class="client-meeting-review">
-            <h2>Client Meeting Review</h2>
-            <span class="note-tag">WORK</span>
+          <article class="note-card work">
+            <header>
+              <span class="note-title">Client Meeting Review</span>
+              <span class="note-tag" id="work">WORK</span>
+            </header>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero
-              repellendus suscipit doloremque perspiciatis hic voluptatem sed
-              recusandae veritatis aut exercitationem.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+              tation.
             </p>
-            
             <footer>
-              <time datetime="2021-01-07T21:38">09:38PM</time>
-              <time datetime="2021-01-07">07 JANUARY 2021</time>
+              <span class="time">09:38PM</span>
+              <span class="history">07 JANUARY 2021</span>
             </footer>
           </article>
 
-          <article class="water-supply-chain-power">
-            <h2>Water Supply Chain Power</h2>
-            <span class="note-tag">WISHLIST</span>
+          <article class="note-card wishlist">
+            <header>
+              <span class="note-title">Water Supply Chain Power</span>
+              <span class="note-tag" id="whislist">WISHLIST</span>
+            </header>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-              at illum minima quos commodi iste animi quas tempora dolores
-              officiis!
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+              tation.
             </p>
             <footer>
-              <time datetime="2020-12-22T02:45">02:45AM</time>
-              <time datetime="2020-12-22">22 DECEMBER 2020</time>
+              <span class="time">02:45AM</span>
+              <span class="history">22 DECEMBER 2020</span>
             </footer>
           </article>
 
-          <article class="social-media-chat">
-            <h2>Social Media Chat</h2>
-            <span class="note-tag">ASSIGNMENT</span>
+          <article class="note-card assignment">
+            <header>
+              <span class="note-title">Social Media Chat</span>
+              <span class="note-tag" id="assignment">ASSIGNMENT</span>
+            </header>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-              quae, sit reprehenderit nesciunt itaque neque dolor qui fuga
-              accusamus deleniti.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+              tation.
             </p>
             <footer>
-              <time datetime="2021-01-01T00:23">12:23PM</time>
-              <time datetime="2021-01-01">01 JANUARY 2021</time>
+              <span class="time">12:23PM</span>
+              <span class="history">01 JANUARY 2021</span>
             </footer>
           </article>
 
-          <article class="client-metting-review2">
-            <h2>Client Meeting Review</h2>
-            <span class="note-tag">PROJECTS</span>
+          <article class="note-card projects">
+            <header>
+              <span class="note-title">Client Meeting Review</span>
+              <span class="note-tag" id="projects">PROJECTS</span>
+            </header>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus
-              repudiandae eaque id ipsam ea cupiditate facere voluptatum quis
-              officiis mollitia?
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+              tation.
             </p>
             <footer>
-              <time datetime="2020-09-10T03:50">03:50AM</time>
-              <time datetime="2020-09-10">10 SEPTEMBER 2020</time>
+              <span class="time">03:50PM</span>
+              <span class="history">10 SEPTEMBER 2020</span>
             </footer>
           </article>
 
-          <article class="musical-instrument">
-            <h2>Musical Instruments</h2>
-            <span class="note-tag">VIDEO</span>
+          <article class="note-card video">
+            <header>
+              <span class="note-title">Musical Instruments</span>
+              <span class="note-tag" id="video">VIDEO</span>
+            </header>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni,
-              doloribus commodi exercitationem tempora dolore vel voluptate
-              impedit asperiores quasi dicta.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+              tation.
             </p>
             <footer>
-              <time datetime="2020-12-22T23:32">11:32PM</time>
-              <time datetime="2020-12-22">22 DECEMBER 2020</time>
+              <span class="time">11:32PM</span>
+              <span class="history">22 DECEMBER 2020</span>
             </footer>
           </article>
 
-          <article class="media-chapter">
-            <h2>Media Chapter II</h2>
-            <span class="note-tag">STUDY</span>
+          <article class="note-card study">
+            <header>
+              <span class="note-title">Media Chapter II</span>
+              <span class="note-tag" id="study">STUDY</span>
+            </header>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-              maxime similique sed beatae unde, atque distinctio ex
-              necessitatibus ipsam quod!
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed diam
+              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+              erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+              tation.
             </p>
             <footer>
-              <time datetime="2020-09-11T18:25">06:25PM</time>
-              <time datetime="2020-09-11">11 SEPTEMBER 2020</time>
+              <span class="time">06:25PM</span>
+              <span class="history">11 SEPTEMBER 2020</span>
             </footer>
           </article>
         </section>
-      </main>
+      </div>
     </div>
   </body>
 </html>
