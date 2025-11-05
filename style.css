@@ -5,33 +5,29 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
-
-.navbar {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
   border-bottom: 2px solid #3c3c3c;
 }
-
 .left-section {
   display: flex;
   align-items: center;
   gap: 75px;
+  width: 300px;
 }
-
 .user-profile {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .avatar {
   border-radius: 50%;
   width: 40px;
@@ -39,30 +35,20 @@ body {
   border: 2px solid #37d6c4;
   padding: 2px;
 }
-
 .all-notes {
-  font-size: 1.5em;
   font-weight: 600;
 }
-
-.nav-actions {
+.header-actions {
   display: flex;
   list-style: none;
   gap: 20px;
   align-items: center;
-  padding: 0;
   margin: 0;
 }
-
 .btn-search {
   border: none;
   background: none;
-  cursor: pointer;
   color: #cecece;
-}
-
-.btn-search svg {
-  stroke: #cecece;
 }
 
 .on {
@@ -71,12 +57,10 @@ body {
   border: none;
   border-radius: 20px;
   font-weight: 600;
-  cursor: pointer;
   display: flex;
   align-items: center;
   font-size: 0.8em;
 }
-
 .status-dot {
   width: 10px;
   height: 10px;
@@ -84,7 +68,6 @@ body {
   border-radius: 50%;
   margin-left: 8px;
 }
-
 .add-note-btn {
   background-color: #37d6c4;
   color: #2b2b2b;
@@ -94,39 +77,28 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
-
 .main-content {
   display: grid;
   grid-template-columns: 250px 1fr;
-  flex-grow: 1;
 }
-
 .menu-list {
-  list-style: none;
-  align-items: flex-start;
   margin: 0;
   padding: 0;
   border-top: 2px solid #353434;
-  width: 100%;
   border-right: 2px solid #353434;
-  height: 100px;
-  justify-content: flex-start;
+  height: 100%; 
+  /* bunu ekledim */
 }
-
 .menu-list li {
   border-bottom: 2px solid #353434;
 }
-
 .menu-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
   color: #cecece;
-  font-weight: 400;
-  cursor: pointer;
 }
-
 .menu-item span:nth-child(2) {
   flex-grow: 1;
   margin-left: 10px;
@@ -136,7 +108,6 @@ body {
   height: 10px;
   margin-right: 10px;
 }
-
 .status1 {
   background-color: #af54a3;
 }
@@ -155,7 +126,6 @@ body {
 .status6 {
   background-color: #b6892a;
 }
-
 .count1 {
   background-color: #af54a3;
   font-size: 12px;
@@ -209,31 +179,28 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: auto;
+  box-sizing: border-box;
 }
 .note-card {
   padding: 20px;
-  border-radius: 10px;
+  min-height: 100px;
+  border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 200px;
   color: #f0f0f0;
 }
-
 .note-card header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
-
 .note-card .note-title {
   font-size: 1.2em;
   font-weight: 600;
 }
-
 .note-card .note-tag {
   font-size: 0.8em;
   font-weight: 700;
@@ -241,33 +208,28 @@ body {
   border-radius: 5px;
   color: #2b2b2b;
 }
-
 .note-card p {
   font-size: 0.9em;
   line-height: 1.5;
-  color: #bdbdbd;
-  flex-grow: 1;
-  margin: 10px 0;
+  color: #f0f0f0;
+  margin: 10px ;
 }
-
 .note-card footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 15px;
   font-size: 0.8em;
-  color: #cecece;
+  color: #f0f0f0;
 }
-
 .note-card.work {
   background-color: #d64f6f;
 }
 .note-card.work .note-tag {
   background-color: #f0f0f0;
 }
-
-#work{
-  color:#d64f6f; 
+#work {
+  color: #d64f6f;
 }
 .note-card.wishlist {
   background-color: #be6a0a;
@@ -278,15 +240,14 @@ body {
 #whislist {
   color: #be6a0a;
 }
-
 .note-card.assignment {
   background-color: #4d61c0;
 }
 .note-card.assignment .note-tag {
   background-color: #f0f0f0;
 }
-#assignment{
-  color:  #4d61c0;
+#assignment {
+  color: #4d61c0;
 }
 .note-card.projects {
   background-color: #36b4a6;
@@ -294,7 +255,7 @@ body {
 .note-card.projects .note-tag {
   background-color: #f0f0f0;
 }
-#projects{
+#projects {
   color: #36b4a6;
 }
 .note-card.video {
@@ -303,17 +264,15 @@ body {
 .note-card.video .note-tag {
   background-color: #f0f0f0;
 }
-#video{
-  color: #ca5cba ;
+#video {
+  color: #ca5cba;
 }
 .note-card.study {
   background-color: #cd9828;
 }
-
 .note-card.study .note-tag {
   background-color: #f0f0f0;
 }
-#study{
-  color: #cd9828 ;
+#study {
+  color: #cd9828;
 }
-
